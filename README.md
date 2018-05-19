@@ -58,7 +58,7 @@ var args = {
     'main': ['int', ['int']]
 };
 var w = b.writeCModule('./example', code);
-var x = b.loadCModule('./example', args, true);
+var x = b.loadCModule('./example', args, false);
 x.main(1, function (err, res) {}); //default sync usage
 x.main.async(1, function (err, res) {}); //async usage
 
